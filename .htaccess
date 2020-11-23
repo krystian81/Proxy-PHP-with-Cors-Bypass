@@ -1,0 +1,9 @@
+IndexIgnore *
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^/$ [OR]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ proxy.php [L]
+
